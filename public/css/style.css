@@ -1,0 +1,128 @@
+.docs-example-orbit-slide {
+  height: 666px;
+  z-index: 10;
+}
+
+.docs-example-orbit-slide img {
+  height: 100%;
+  width: 100%;
+}
+
+.img-samll {
+  margin: 10px;
+  display: block;
+}
+
+.container-front-page-header {
+  z-index: 100;
+  position: absolute;
+}
+
+.container-front-page-header p {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-front-page-header .row a {
+  width: 90% !important;
+  margin-left: 5%;
+  border-radius: 20px;
+}
+#talent-button {
+  background-color: rgba(247, 93, 2, 0.6);
+  border: white solid 2px;
+}
+
+
+#agencies-button {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: white solid 2px;
+}
+
+button.orbit-previous,
+button.orbit-next {
+  z-index: 110;
+}
+
+.small-3 {
+  display: inline-block;
+}
+
+#overview, #staffing, #scheduling {
+  text-align: center;
+}
+
+#overview p, #staffing p, #scheduling p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+/* alert */
+.alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+
+.alert-success_msg {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+
+
+.container-front-page-header img {
+  margin: 10px;
+}
+
+.container-front-page-header p {
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+
+/* Media query */
+@media screen and (min-width: 490px){
+  .container-front-page-header{
+    margin-left: 10%;
+  }
+  #overview, #staffing, #scheduling {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+
+@media screen and (min-width: 638px){
+  .container-front-page-header{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .container-front-page-header{
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  #overview, #staffing, #scheduling {
+    width: 32%;
+    height: 50px;
+  }
+}
+
+/** {
+border: 1px solid black;
+}*/

@@ -1,0 +1,26 @@
+include head.pug
+link(rel='stylesheet', href='/css/talent_form.css')
+include scripts.pug
+.row.small-12
+  .title-bar(data-responsive-toggle='example-animated-menu', data-hide-for='medium')
+    .title-bar-title #{title}
+form(method='POST', action='/admin/dashboard/add')
+  .row
+    .small-6.columns
+      label(for='name') Name
+      input(type='text', placeholder='type ....', name='name', required)
+    .small-6.colums
+      label(for='lastName') Last Name
+      input(type='text', placeholder='type ....', name='lastName', required)    
+  .row
+    .small-12.columns
+      label(for='email') Email Address
+      input(type='email', placeholder='type ....', name='email', required)
+    .small-12.columns
+      label(for='phone') Phone Number
+      input(type='tel', placeholder='(000) 000-0000', name='phone', required)
+  .row
+    .small-12
+      button.button.expanded(type='submit') NEXT
+    
+      a.button.expanded(href='/') BACK

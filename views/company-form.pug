@@ -1,0 +1,28 @@
+doctype
+html
+  head
+    include head.pug
+    link(rel='stylesheet', href='/css/talent_form.css')
+    link(rel='stylesheet', href='/css/agencies-form.css')
+  body
+    .row.small-12
+      .title-bar(data-responsive-toggle='example-animated-menu', data-hide-for='medium')
+        .title-bar-title Company
+    form(method='post', action='/company/new')
+      .row
+        .small-12.columns
+          label(for='name') Name
+          input(type='text', placeholder='type ....', name='name', required) 
+      .row
+        .small-12.columns
+          label(for='email') Email Address
+          input(type='email', placeholder='type ....', name='email', required)
+        .small-12.columns
+          label(for='phone') Phone Number
+          input(type='tel', placeholder='(000) 000-0000', name='phone', required)
+      .row
+        .small-12
+          button.button.expanded(type='submit') NEXT
+        
+          a.button.expanded(href='/') BACK
+      include scripts.pug

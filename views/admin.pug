@@ -1,0 +1,100 @@
+doctype
+html
+  head
+    include head
+    link(rel='stylesheet', href='/css/talent_form.css')
+    link(rel='stylesheet', href='/css/admin.css')
+  body
+    header
+    .row.small-12
+      .title-bar(data-responsive-toggle='example-animated-menu', data-hide-for='medium')
+        .title-bar-title DashBoard
+        .top-bar-right
+          ul.menu
+            li
+              a.button(href='/admin/logout')
+                span.fi-torso  LogOut
+                
+    br
+        
+    section
+      
+      != messages('message', locals)
+      if message
+        each msg, i in message
+          div(class='callout alert') #{msg}
+      
+      ul.tabs(data-tabs, id='example-tabs')
+        li.tabs-title.is-active
+          a(href='#panel1')
+            h1.text-center Talents
+            hr 
+        li.tabs-title
+          a(href='#panel2')
+            h1.text-center Comp.
+            hr
+        li.tabs-title
+          a(href='#panel3')
+            h1.text-center +
+            hr      
+      .tabs-content(data-tabs-content='example-tabs')
+        .tabs-panel.is-active(id='panel1')
+          table
+            thead
+              tr
+                th Name
+                th Email
+                th Phone
+            tbody
+              each talent in talents
+                tr
+                  td
+                    a(href='/admin/dashboard/update/talent/' + talent._id)= talent.name + ' '+ talent.lastName
+                  td
+                    a(href='/admin/dashboard/update/talent/' + talent._id)= talent.email
+                  td
+                    a(href='/admin/dashboard/update/talent/' + talent._id)= talent.phone  
+                
+        .tabs-panel(id='panel2')
+          table
+            thead
+              tr
+                th Name
+                th Email
+                th Phone
+            tbody
+              each company in companies
+                tr
+                  td
+                    a(href='/admin/dashboard/update/company/' + company._id)= company.name
+                  td
+                    a(href='/admin/dashboard/update/company/' + company._id)= company.email
+                  td
+                    a(href='/admin/dashboard/update/company/' + company._id)= company.phone
+        .tabs-panel(id='panel3')
+          
+          form(method='POST', action='/admin/dashboard/add/talent')
+            .row
+              .small-6.columns
+                label(for='name') Name
+                input(type='text', placeholder='type ....', name='name', required)
+              .small-6.colums
+                label(for='lastName') Last Name
+                input(type='text', placeholder='type ....', name='lastName', required)    
+            .row
+              .small-12.columns
+                label(for='email') Email Address
+                input(type='email', placeholder='type ....', name='email', required)
+              .small-12.columns
+                label(for='phone') Phone Number
+                input(type='tel', placeholder='(000) 000-0000', name='phone', required)
+            .row
+              .small-12
+                button.button.expanded(type='submit') ADD
+              
+            
+    br
+    include scripts
+
+
+    

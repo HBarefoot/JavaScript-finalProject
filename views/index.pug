@@ -1,0 +1,39 @@
+extends layout.pug
+
+block header
+      .orbit(role='region', aria-label='Favorite Text Ever' data-orbit)
+          .container-front-page-header
+             img.img-small(src='/img/Vooked Copy.png')
+             br
+             p Connect with the best restaurant staff in your city.
+             p Connect with the best staffing agencies in your city.
+             p OK, but how does it work?
+             br
+             .row
+                a#talent-button(class='button extended', href='/company/new') Looking for Talents
+                br
+                a#agencies-button(class='button extended', href='/talent/new') Looking for Companies
+             br
+          ul.orbit-container
+             button.orbit-previous(arial-label='previous') &#9664;
+                span.show-for-sr Previous Slide
+             button.orbit-next(aria-label='next') &#9654;
+                span.show-for-sr Next Slide
+             li.orbit-slide
+                .docs-example-orbit-slide
+                   img(src='/img/coctels_staffing.png')
+             li.orbit-slide
+                .docs-example-orbit-slide
+                   img(src='/img/pexels-photo-169391.jpeg')
+             li.orbit-slide
+                .docs-example-orbit-slide
+                   img(src='/img/pexels-photo-196031.jpeg')
+          nav.orbit-bullets
+             button(data-slide='0')
+                span.show-for-sr First slide details.
+                span.show-for-sr Current Slide
+             button(data-slide='1')
+                span.show-for-sr Second Slide
+             button(data-slide='2')
+                span.show-for-sr Third Slide
+      br

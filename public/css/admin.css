@@ -1,0 +1,38 @@
+hr {
+  width: 40px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+
+tr th:first-child, tr td:first-child {
+  text-align: left;
+}
+
+tr td {
+  font-size: 14px;
+}
+
+#panel1, #panel2, #panel3 {
+  height: 400px;
+  overflow: scroll;
+}
+
+
+button.hollow {
+  margin: 0;
+}
+
+
+
+/** {
+  border: solid 1px black;
+}*/
+.tabs-title {
+  width: 32%;
+}
+
+form {
+  margin-top: 0;
+  box-shadow: none;
+}

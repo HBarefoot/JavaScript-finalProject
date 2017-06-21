@@ -1,0 +1,35 @@
+doctype
+html
+  head
+    include head
+    link(rel='stylesheet', href='/css/talent_form.css')
+    link(rel='stylesheet', href='/css/agencies-form.css')
+    link(rel='stylesheet', href='/css/admin-login.css')
+  
+  body
+    
+    != messages('message', locals)
+    if message
+      each msg, i in message
+        div(class='callout alert') #{msg}
+        
+    form(method='post', action='/admin/login')
+      .row
+        .small-6.small-push-1.columns
+          img(src='/img/Vooked Copy.png')
+        .small-6.small-pull-1.columns
+          h2 Log In
+          hr
+      .row
+        .small-12.columns
+          label(for='username') User Name
+          input(type='text', placeholder='type ....', name='username', required)
+        .small-12.columns
+          label(for='password') Password
+          input(type='password', placeholder='XXXXXXXXXXXXX', name='password', required)
+      .row
+        .small-12
+          button.button.expanded(type='submit') LogIn
+    
+    
+    include scripts

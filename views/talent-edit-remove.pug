@@ -1,0 +1,27 @@
+include head.pug
+link(rel='stylesheet', href='/css/talent_form.css')
+include scripts.pug
+.row.small-12
+  .title-bar(data-responsive-toggle='example-animated-menu', data-hide-for='medium')
+    .title-bar-title #{title}
+form(method='POST', action='/admin/dashboard/update/talent/:id')
+  .row
+    .small-6.columns
+      label(for='name') Name
+      input(type='text', placeholder='type ....', name='name', required, value=talent.name)
+    .small-6.colums
+      label(for='lastName') Last Name
+      input(type='text', placeholder='type ....', name='lastName', required, value=talent.lastName)    
+  .row
+    .small-12.columns
+      label(for='email') Email Address
+      input(type='email', placeholder='type ....', name='email', required, value=talent.email)
+    .small-12.columns
+      label(for='phone') Phone Number
+      input(type='tel', placeholder='(000) 000-0000', name='phone', required, value=talent.phone)
+  .row
+    .small-12
+      button.button.expanded(type='submit') Update
+    
+      a.button.expanded(href='/admin/dashboard/delete/talent', data-id=talent._id) Delete
+      a.button.expanded(href='/admin/dashboard') Go Back
