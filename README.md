@@ -1,8 +1,8 @@
 # JavaScript-finalProject
 # Technologies implemented
-   # NodeJs
-   # JavaScript
-   # MongoDB
-   # Pug
-   # CSS3
-   # Foundation Zurb
+    NodeJs
+    JavaScript
+    MongoDB
+    Pug
+    CSS3
+    Foundation Zurb
